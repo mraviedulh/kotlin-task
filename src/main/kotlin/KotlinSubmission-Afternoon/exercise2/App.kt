@@ -9,7 +9,9 @@ fun main() {
     - Agar lebih mudah, gunakanlah for loop dan logika if untuk mengisi bilangan genap pada list
      */
     // Buat di bawah sini
-
+    val range = 1..100
+    val genap:List<Int> = range.filter { it % 2 == 0 }
+    println(genap)
 
     /** Latihan 2 Map
     Buatlah variabel bertipe Map dengan kriteria:
@@ -17,19 +19,36 @@ fun main() {
     - Set Key nya dengan inisial nama bulan dan Value nya nama bulan, contoh
     - key "Jan", value January
     - key "Feb", value February
-    - dst...
+    - dst...**/
     // Buat di bawah sini
-
-    Cetak semua nama bulan dengan fungsi forEach sehingga hasil output seperti:
+    val month:Map<String, String> = mapOf(
+        "Jan" to "January",
+        "Feb" to "February",
+        "Mar" to "March",
+        "Apr" to "April",
+        "Mei" to "Mei",
+        "Jun" to "June",
+        "Jul" to "July",
+        "Aug" to "August",
+        "Sep" to "September",
+        "Oct" to "October",
+        "Nov" to "November",
+        "Dec" to "December"
+    )
+    /**Cetak semua nama bulan dengan fungsi forEach sehingga hasil output seperti:
     - Jan -> January
     - Feb -> February
-    - Dst...
+    - Dst...*/
     // Buat di bawah sini
-
-    Cetak nama bulan sekarang dan bulan lahir kamu dengan format string berikut:
+    month.forEach {
+        println("${it.key} -> ${it.value}")
+    }
+    /**Cetak nama bulan sekarang dan bulan lahir kamu dengan format string berikut:
     - "It's {$monthNow} now, I was born in {$birthMonth}"
      */
     // Buat di bawah sini
-
+    val monthNow = month["Nov"]
+    val birthMonth = month["Feb"]
+    println("It's $monthNow now, I was born in $birthMonth")
 
 }

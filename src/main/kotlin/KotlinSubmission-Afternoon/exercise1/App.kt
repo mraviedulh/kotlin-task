@@ -9,17 +9,21 @@ Lengkapi fungsi myProfile di bawah ini dengan membuat variabel dengan ketentuan 
 - Variable bertipe data boolean yang menyimpan nilai status Anda (single atau tidak)
 Dan Cetak setiap variabel ke layar saat variable myProfile di panggil
  */
-fun myProfile() {
-
+fun myProfile(status:Boolean) {
+    val nama_depan = "Muhammad Raviedul"
+    val nama_belakang = "Huda"
+    val umur = 23
+    val result = if (status) "single" else "tidak"
+    println("nama saya $nama_depan $nama_belakang, saya berumur $umur dan saya masih $result")
 }
-
 
 /**
  *  Latihan 2
  *  Lengkapi fungsi di bawah ini agar dapat mencetak nilai dari parameter-parameter yang ada dengan fungsi println
  */
 fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
-    return ""
+    val result:Any = println("$groupId $groupMember $session")
+    return result
 }
 
 /**
@@ -29,8 +33,18 @@ fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
  *
  */
 fun myTeam(): List<Any> {
-
-    return listOf()
+    val members:List<Any> = listOf("Raihanah Luthfiyah Rosanti",
+    "Fatah Muhamad Fikrudin",
+    "sultan alif",
+    "Hasany Ibrohim",
+    "Titin ",
+    "Andi sarippudin",
+    "Muhammad Andra Fahreza ",
+    "Tri Saputra. S",
+    "Rikza Akmal Habibi",
+    "aizal irawan",
+    "Muhammad Raviedul Huda")
+    return listOf(members[10])
 }
 
 /**
@@ -41,15 +55,24 @@ fun myTeam(): List<Any> {
  *
  */
 fun totalMember(): Int {
-    val mentor = arrayOf<String>()
-    val countOfGroup = arrayOf<String>()
-
-    return 0
+    val mentor = arrayOf<String>("Kak Maul", "Kak Joy")
+    val countOfGroup = arrayOf<String>("Raihanah Luthfiyah Rosanti",
+        "Fatah Muhamad Fikrudin",
+        "sultan alif",
+        "Hasany Ibrohim",
+        "Titin ",
+        "Andi sarippudin",
+        "Muhammad Andra Fahreza ",
+        "Tri Saputra. S",
+        "Rikza Akmal Habibi",
+        "aizal irawan",
+        "Muhammad Raviedul Huda")
+    return mentor.size + countOfGroup.size
 }
 
 fun main() {
 
-    myProfile()
+    myProfile(true)
 
     val myTeam = myTeam()
     println("My team is: $myTeam")
@@ -62,6 +85,18 @@ fun main() {
      *  Ubah nilai argumen-argumen dari fungsi groupDetail di bawah ini sesuai dengan data group kamu
      *
      */
-    groupDetail("", listOf(), "")
+    groupDetail("Ha Heng", listOf(
+        "Raihanah Luthfiyah Rosanti",
+        "Fatah Muhamad Fikrudin",
+        "sultan alif",
+        "Hasany Ibrohim",
+        "Titin ",
+        "Andi sarippudin",
+        "Muhammad Andra Fahreza ",
+        "Tri Saputra. S",
+        "Rikza Akmal Habibi",
+        "aizal irawan",
+        "Muhammad Raviedul Huda"
+    ), "Afternoon")
 
 }
